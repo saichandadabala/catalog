@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	.button {
+  background-color:#770202;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: underline;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+		
+		
+	</style>
+	
+</head>
+<body >
+	<div align="right"  >
+        {%if 'username' not in session %}
+        <a href="{{url_for('showLogin')}}" class=" button">Login</a>
+        {% else %}
+          {% if session.user_id %}
+          <img src="{{ session['picture']}}" alt="profile image" width="62" height="62" id="prof-img">
+
+          <a href="{{url_for('gdisconnect')}}" class=" button">Logout:{{ session['email']}} </a>
+          {% endif %}
+        {% endif %} 
+
+</div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+body
+{background-repeat: no-repeat;
+ background-size: cover;
+ background-attachment: fixed;
+ background-image:url('https://bit.ly/2ShR3Ge');
+}
+ h1, h2, h3, h4       
+ { color: 	#A52A2A }
+
+
+h1, h2          
+{ font-family: 'Georgia', serif; margin: 0; }
+
+
+
+h1{ border-bottom: 2px solid #eee; }
+h2{ font-size: 1.2em; }
+
+p{ color: #40E0D0;
+ font-size: 16px;}
+
+a {text-decoration: none; color:white; font-size: 1.00em;}
+
+
+.button1 {
+  background-color:	#228B22;
+  border: none;
+  color: black;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button2 {
+  background-color:#800000;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.button3 {
+  background-color:	#9ACD32;
+  border: none;
+  color: black;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: underline;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+		.button1 {border-radius: 20px;}
+		.button2 {border-radius: 20px;}
+		.button3 {border-radius: 20px;}
+	
+
+.f{
+			text-decoration: none;
+			 color:white;
+			  font-size: 1.75em;
+		}
+
+.pane {position:absolute; left: 5%;right: 5% border: 2px solid;
+    border-radius: 50px; padding: 50px; margin: 5px; border-color: #999999; background-color:hsla(0,0%,0%,0.3); }
+
+.pane1 {position:absolute; left: 30%;right: 30%; border: 10px solid;
+    border-radius: 10px; padding: 20px; margin: 5px; border-color: #999999; background-color:hsla(0,0%,0%,0.7); }    
+
+.navbar-profile-image{
+    height: 40px;
+    padding-bottom: 0px;
+}
+
+.flash          { background: #cee5F5;
+color: red }
+
+
+

@@ -1,0 +1,65 @@
+<html>
+	
+<head>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+	</head>
+	<body>
+		<center>
+
+		
+		{% block content %}
+		<div class = 'pane1'>
+		<a href = "{{url_for('showBikes', category_id = category.id )}}">
+<h1>{{ category.name }}</h1></a>
+		
+		{% with messages = get_flashed_messages() %}
+      {% if messages %}
+          
+        <ul>
+        {% for message in messages %}
+            <li style="color:red"> <strong> {{ message }} </strong> </li>
+        {% endfor %}
+        </ul>
+        {% endif %}
+    {% endwith %}
+
+    {% if models !=[] %}
+    	<a href = "{{url_for('showModels', category_id = category.id )}}"><br><br>
+
+
+
+		<a href = "{{url_for('newTypes', category_id = category.id )}}" class="button3">Create New Model</a>
+	</br></br>
+	{% for i in models%}
+		<h2><i>Name</i></h2>
+		<p>{{i.name}}</p>
+	
+		<h3>Description</h3>
+		<p>{{i.description}}</p>
+	
+		<h3>Price</h3>
+		<p>{{i.price}}</p>
+		
+	
+		<a href='{{url_for('editTypes', category_id = category.id, menu_id=i.id ) }}' class="button1" >Edit</a>
+	<a href='{{url_for('deleteTypes', category_id = category.id, menu_id=i.id ) }}' class="button2">Delete</a>
+</br>
+</br>
+	{% endfor %}
+
+
+		</br></br>
+
+
+
+				
+
+		{% else %}
+		<p> You currently have no Models <p>
+		<a href = "{{url_for('newTypes', category_id = category.id )}}">Create New Model</a>
+	{% endif %}		
+</div>
+{% endblock %}
+	</body>
+
+</html>

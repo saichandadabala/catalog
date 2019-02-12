@@ -1,0 +1,37 @@
+<html>
+
+<head>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+<style type="text/css">
+
+	
+	</style>
+	</head>
+
+<center><body>
+	{% include "login_page.html" %}
+	
+<div class = 'pane'>
+<h1>Bikes</h1>
+
+<a href="{{url_for('newBikes')}}"><h3> Create a New Category </h3> </a>
+
+{% for category in categories %}
+
+
+
+<a href = "{{url_for('showModels', category_id = category.id)}}"> <p ><h2>{{category.name}}</p></h2></a>
+
+<p><a href = "{{url_for('editBikes',category_id = category.id)}}"class=" button1">Edit Category</a></p>
+
+<p> <a href = "{{url_for('deleteBikes',category_id = category.id)}}"class=" button2">Delete Category</a> </p>
+
+
+
+
+{% endfor %}
+
+</div>
+</body>
+
+</html>

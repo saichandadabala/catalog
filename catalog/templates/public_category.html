@@ -1,0 +1,38 @@
+<html>
+
+<head>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+	</head>
+	<style type="text/css">
+		.f{
+			text-decoration: none;
+			 color:white;
+			  font-size: 1.75em;
+		}
+	</style>
+
+
+<body>
+	{% include "login_page.html" %}
+	
+<div class = 'pane'>
+<h1>Bikes</h1>
+
+
+{% for category in categories %}
+
+
+
+<a href = "{{url_for('showModels', category_id = category.id)}}"> <p class='f'>{{category.name}}</p></a>
+
+
+
+
+
+
+{% endfor %}
+
+</div>
+</body>
+
+</html>

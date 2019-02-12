@@ -1,0 +1,35 @@
+<html>
+
+<head>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+
+
+	</head>
+
+<body><h1> Edit Model </h1>
+
+<form action="{{ url_for('editTypes', category_id=category_id,menu_id=menu_id) }}" method = 'post'>
+
+
+	<p>Name:</p>
+		<input type ='text' size='30' name='name' placeholder = '{{model.name }}' required>
+	<p>Description:</p>
+		<input type ='text box' size='30'  name='description'placeholder= '{{model.description}}' required>
+	<p>Price:</p>
+		<input type ='number' size='30' name='price' placeholder = '{{model.price}}' required>
+	
+
+<br>
+<br>
+<input type='submit' value='Edit'>
+
+<a href="#"><input type='submit' value='Back'</a>
+
+
+<a href = '#'<input type='submit' value='Cancel'>  </a>
+
+
+</form>
+</body>
+</html>
+

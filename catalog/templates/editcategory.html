@@ -1,0 +1,45 @@
+<html>
+
+
+<head>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+
+<style type="text/css">
+	.button {
+  background-color:#770202;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+		
+		
+	</style>
+	</head>
+
+<body>
+  <center>
+
+<h1> Edit Category </h1>
+
+
+<form action="{{ url_for('editBikes',category_id = category.id)}}" method = 'post' >
+
+
+	<p >Name:</p>
+		<input type ='text' size='30' name='name' placeholder = '{{category.name }}' required><br><br>
+
+
+<a href = '{{url_for('showBikes')}}'><input type="submit" value="Edit" required></a>
+
+<a href = '{{url_for('showBikes')}}'><input type="button" value="Cancel"></a>
+</form>
+</center>
+</body>
+
+</html>
